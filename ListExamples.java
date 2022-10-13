@@ -3,6 +3,19 @@ import java.util.List;
 
 interface StringChecker { boolean checkString(String s); }
 
+class LongWordChecker implements StringChecker {
+  
+  @Override
+  public boolean checkString(String s) {
+    if(s.length() > 5) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+}
+
 class ListExamples {
 
   // Returns a new list that has all the elements of the input list for which
@@ -40,7 +53,7 @@ class ListExamples {
     }
     while(index2 < list2.size()) {
       result.add(list2.get(index2));
-      index1 += 1;
+      index2 += 1;
     }
     return result;
   }
